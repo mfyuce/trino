@@ -88,3 +88,16 @@ all the required artifacts:
 ## Getting Help
 
 Join the Trino community [Slack](https://trino.io/slack.html).
+
+
+# Maya
+
+```bash
+ ./mvnw clean install -DskipTests
+ 2002  cd core/docker/
+ 2003  ./build.sh -a amd64 
+ 2006  docker images
+ 2007  docker tag fc2bfb7c4eea 192.168.57.202:35000/trino:432-amd64
+ 2008  docker push 192.168.57.202:35000/trino:432-amd64 
+
+```

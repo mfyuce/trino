@@ -23,12 +23,12 @@ import static io.airlift.slice.SizeOf.instanceSize;
 import static io.trino.spi.connector.SchemaUtil.checkNotEmpty;
 import static java.util.Locale.ENGLISH;
 
-public final class SchemaTableName
+public class SchemaTableName
 {
     private static final int INSTANCE_SIZE = instanceSize(SchemaTableName.class);
 
-    private final String schemaName;
-    private final String tableName;
+    protected String schemaName;
+    protected String tableName;
 
     @JsonCreator
     public SchemaTableName(@JsonProperty("schema") String schemaName, @JsonProperty("table") String tableName)
